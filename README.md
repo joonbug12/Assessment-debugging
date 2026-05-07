@@ -28,7 +28,7 @@ cd Assessment-debugging
 # create virtual environment using uv (respects both .python-version and pyproject.toml)
 source $HOME/.local/bin/env \
 uv venv \
-source .venv/bin/activate \
+source .venv/bin/activate 
 
 # install the dependencies
 (make sure to have the correct python version) \
