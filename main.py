@@ -6,6 +6,7 @@ import datetime
 from datetime import datetime as dt
 import pathlib
 
+#main.py
 app = dash.Dash(
     __name__,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
@@ -49,7 +50,7 @@ day_list = [
     "Sunday",
 ]
 
-check_in_duration = df["Check-In Time"].describe(datetime_is_numeric=True)
+check_in_duration = df["Check-In Time"].describe()
 
 all_departments = df["Department"].unique().tolist()
 wait_time_inputs = [
@@ -553,7 +554,7 @@ app.layout = html.Div(
                     children=[
                         html.B("Patient Wait Time and Satisfactory Scores"),
                         html.Hr(),
-                        html.Div(id="wait_time_tabel", children=initialize_table()),
+                        html.Div(id="wait_time_table", children=initialize_table()),
                     ],
                 ),
             ],
@@ -709,4 +710,4 @@ def update_table(start, end, clinic, admit_type, heatmap_click, reset_click, *ar
 
 # Run the server
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True, port=10030)

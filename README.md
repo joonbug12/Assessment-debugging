@@ -11,3 +11,30 @@ This repository contains a broken web app built with Dash. Please follow the tas
    2. Use a modern python package manager that respects `pyproject.toml` and `.python-version`, rather than `pip`.
    3. Setup virtual environment, start the app, and access the app.
 6. Commit and push all the changes, and provide a link to your own repo in your submission in the last.
+
+
+
+## How to run
+
+### Fedora Linux
+
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone the repo
+git clone <repo-url>
+cd Assessment-debugging
+
+# create virtual environment using uv (respects both .python-version and pyproject.toml)
+source $HOME/.local/bin/env
+uv venv
+source .venv/bin/activate
+
+# install the dependencies
+(make sure to have the correct python version)
+uv sync
+
+# run the app
+python3 main.py
+
+# Access the app at http://localhost:10030
