@@ -22,8 +22,7 @@ This repository contains a broken web app built with Dash. Please follow the tas
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone the repo
-git clone "repo url here" in this specific assessment, the link is "https://github.com/joonbug12/Assessment-debugging". For your convenience ill just type the exact command to be copy pasted
-git clone https://github.com/joonbug12/Assessment-debugging
+git clone https://github.com/joonbug12/Assessment-debugging \
 cd Assessment-debugging
 
 # create virtual environment using uv (respects both .python-version and pyproject.toml)
